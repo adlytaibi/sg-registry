@@ -52,14 +52,17 @@ Setup a private Docker Registry using S3 backend as storage with SSL and usernam
    Re-type new password: 
    ```
 
-4. Edit `docker-compose.yml` and fill-in the following parameters
+4. Create `docker-compose.override.yml` and fill-in the following parameters or directly edit `docker-compose.yml`
 
    ```sh
-   REGISTRY_STORAGE_S3_ACCESSKEY: access key
-   REGISTRY_STORAGE_S3_SECRETKEY: secret key
-   REGISTRY_STORAGE_S3_BUCKET: bucket name
-   REGISTRY_STORAGE_S3_REGION: us-east-1
-   REGISTRY_STORAGE_S3_REGIONENDPOINT: StorageGRID gateway or storage node
+   cat docker-compose.override.yml 
+   registry:
+     environment:
+       REGISTRY_STORAGE_S3_ACCESSKEY: myAccessKey
+       REGISTRY_STORAGE_S3_SECRETKEY: mySecretKey
+       REGISTRY_STORAGE_S3_BUCKET: myBucket
+       REGISTRY_STORAGE_S3_REGION: us-east-1
+       REGISTRY_STORAGE_S3_REGIONENDPOINT: myStorageGRIDGateway
    ```
 
 5. Start the Docker Registry container
