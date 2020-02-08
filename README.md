@@ -62,7 +62,7 @@ Setup a private Docker Registry using S3 backend as storage with SSL and usernam
        REGISTRY_STORAGE_S3_SECRETKEY: mySecretKey
        REGISTRY_STORAGE_S3_BUCKET: myBucket
        REGISTRY_STORAGE_S3_REGION: us-east-1
-       REGISTRY_STORAGE_S3_REGIONENDPOINT: myStorageGRIDGateway
+       REGISTRY_STORAGE_S3_REGIONENDPOINT: myStorageGRIDGateway:8082
    ```
 
 5. Start the Docker Registry container
